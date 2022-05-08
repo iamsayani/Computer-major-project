@@ -1,70 +1,71 @@
-html{
-    scroll-behavior: smooth;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-header{
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-.container{
-    padding: 20px;
-    margin: 0 auto;
+body{
+    font-family: 'Arial' , sans-serif;
 }
 nav{
+    background: #fff;
+    color: green;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    padding: 15px;
 }
-.nav-ul{
+nav .main{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
-.nav-ul li a{
+nav .main li a{
     display: inline-block;
-    justify-content: space-between;
-    text-align: center;
-    color:green;
-    font-family: gabriola;
-    font-weight: bold;
-    padding: 10px 20px;
+    padding: 15px;
     text-decoration: none;
-    font-size: 22px;
+    text-transform: uppercase;
+    color: green;
+    font-size: 1.5rem;
 }
-.hamburger{
-    background-color: transparent;
-    border: 0;
+nav .open{
+    font-size: 2rem;
+    margin: 20px;
     display: none;
-    color: black;
     cursor: pointer;
-    font-size: 20px;
 }
-.hamburger:focus{
-    outline: none;
+nav .main .close , .icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
 }
-@media  screen and (max-width:767px){
-    .nav-ul{
-        display: none;
+nav .logo{
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+@media screen and (max-width:800px){
+    nav .main{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
         flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        transition: top 1% ease;
+        display: none;
     }
-    .nav-ul.show{
-        display: flex;
+    nav .main .close{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
-    .hamburger{
+    nav .open{
         display: block;
     }
-    .logo{
-        width: 120px;
-    }
-    .nav-ul li a{
-        padding: 10px;
-    }
-    header{
-        padding-bottom: 0;
+    .icons i{
+       display: inline-block;
+       padding: 12px; 
     }
 }

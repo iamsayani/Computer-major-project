@@ -1,5 +1,17 @@
-const hamburger = document.getElementById('hamburger');
-const navUL = document.getElementById('nav-ul');
-hamburger.addEventListener('click', () => {
-    navUL.classList.toggle('show');
-});
+const mainMenu = document.querySelector('.main');
+const closeMenu = document.querySelector('.close');
+const openMenu = document.querySelector('.open');
+
+
+
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+function show(){
+    mainMenu.style.display ='flex';
+    mainMenu.style.top ='0';
+}
+function close(){
+    mainMenu.style.top ='-100%';
+}
